@@ -1,0 +1,43 @@
+@import "transitionAll.less";
+
+.headlineTitle
+{
+    font-size: 32px;
+}
+.headlineDescription
+{
+    font-size: 22px;
+}
+#newsHeadlines, 
+#hackerNews
+{
+    position: absolute;
+    bottom: 20px;
+    width: 45%;
+    .TransitionAll(1.6s);
+}
+.newsTransitionOut
+{
+    left: -400px;
+    opacity: 0;
+}
+.newsTransitionIn
+{
+    left: 20px;
+    margin-right: 40px;
+    opacity: 1;
+}
+#newsHeadlines div, #hackerNews div
+{
+    margin: 6px;
+}
+.hackerNewsTransitionOut
+{
+    right: -400px;
+    opacity: 0;
+}
+.hackerNewsTransitionIn{
+    right: 0px;
+    margin-left: 40px;
+    opacity: 1;
+}

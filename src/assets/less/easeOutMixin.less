@@ -1,0 +1,14 @@
+@defaultDuration: 1s;
+
+.EaseOutAnimation(@animation, @duration:@defaultDuration) {
+	animation: @animation ease-out @duration;
+    animation-iteration-count: infinite;
+    -webkit-animation: @animation ease-out @duration;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: @animation ease-out @duration;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: @animation ease-out @duration;
+    -o-animation-iteration-count: infinite;
+    -ms-animation: @animation ease-out @duration;
+    -ms-animation-iteration-count: infinite;
+}

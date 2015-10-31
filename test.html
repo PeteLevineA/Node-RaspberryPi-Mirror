@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        var TIME_TO_TURN_SCREEN_OFF = 6;
+        var dateLastSensed;
+        var timeoutDisplay;
+
+        function shouldDisplayTurnOn() {
+            var date = new Date();
+            var turnDisplayOn = false;
+            alert('hi');
+            if (dateLastSensed === null || dateLastSensed === undefined) {
+                dateLastSensed = date;
+                turnDisplayOn = true;
+            }
+            if (dateLastSensed - date > TIME_TO_TURN_SCREEN_OFF * 1000) {
+                turnDisplayOn = true;
+            }
+            dateLastSensed = date;
+            return turnDisplayOn;
+        }
+
+        function resetCounter() {
+            if (shouldDisplayTurnOn()) {
+                document.getElementById('btnStart').innerText = "Started";
+                if (timeoutDisplay) {
+                    window.clearTimeout(timeoutDisplay);
+                }
+                timeoutDisplay = setTimeout(turnOffDisplayAndCloseBrowser, TIME_TO_TURN_SCREEN_OFF * 1000);
+            } else {
+                if (timeoutDisplay) {
+                    window.clearTimeout(timeoutDisplay);
+                }
+                timeoutDisplay = setTimeout(turnOffDisplayAndCloseBrowser, TIME_TO_TURN_SCREEN_OFF * 1000);
+            }
+        }
+
+        function turnOffDisplayAndCloseBrowser() {
+            document.getElementById('alertDiv').innerHTML = "alert";
+            document.getElementById('btnStart').innerText = "ended";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="resetCounter()" id="btnStart">Hi</button>
+    <div id="alertDiv"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+@import "easeOutMixin.less";
+
+#cursorText
+{
+    .EaseOutAnimation(fadeAnimation, .6s);
+}
+
+@keyframes fadeAnimation{
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-moz-keyframes fadeAnimation{
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadeAnimation {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-o-keyframes fadeAnimation{
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-ms-keyframes fadeAnimation {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}

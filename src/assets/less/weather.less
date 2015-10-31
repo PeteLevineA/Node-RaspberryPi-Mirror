@@ -1,0 +1,57 @@
+@import "transitionAll.less";
+
+#weather
+{
+    position: absolute;
+    top: 22px;
+    .TransitionAll(2s);
+}
+.weatherTransitionIn
+{
+    right: 22px;
+    opacity: 1;
+}
+.weatherTransitionOut
+{
+    right: -160px;
+    opacity: 0;
+}
+#mainWeather
+{
+    font-size: 24px;
+}
+#mainWeatherImage
+{
+    color: #fff;
+    width: 150px;
+}
+#mainWeatherimg, #mainTemp
+{
+    text-align: center;
+}
+#mainTemp
+{
+    font-size: 36px;
+}
+.day
+{
+    position: relative;
+    left: 50%;
+    margin-left: -90px;
+    display: table;
+    text-align: center;
+    font-size: 22px;
+    padding-top: 10px;
+}
+.day span
+{
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.day img
+{
+    width: 50px;
+}
