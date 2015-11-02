@@ -60,7 +60,23 @@
     width: 50px;
 }
 
-@media only screen and (orientation: landscape)
+@media only screen 
+    and (orientation: landscape)
+{
+    .forecast {
+        position: absolute;
+        top: @padding;
+        left: 210px;
+    }
+    .weatherTransitionIn
+    {
+        right: 204px;
+        opacity: 1;
+    }
+}
+@media only screen 
+    and (min-width:1280)
+    and (-webkit-max-device-pixel-ratio: 1)
 {
     .forecast {
         position: absolute;
