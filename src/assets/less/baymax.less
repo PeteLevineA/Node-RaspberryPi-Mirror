@@ -1,3 +1,5 @@
+@import "constants.less";
+
 #baymax
 {
     position: absolute;
@@ -32,14 +34,14 @@
     margin-left: -90px;
     height: 130px;
     width: 180px;
-    background: #fff;
+    background: @foregroundColor;
     border-radius: 60px;
 }
 .eye
 {
     height: 40px;
     width: 40px;
-    background: #000;
+    background: @backgroundColor;
     border-radius: 20px;
 }
 #baymaxLeftEye
@@ -61,7 +63,7 @@
     position: absolute;
     left: 65px;
     top: 59px;
-    background: #000;
+    background: @backgroundColor;
 }
 #baymaxLeftArm,
 #baymaxRightArm
@@ -70,7 +72,7 @@
     top: 134px;
     width: 80px;
     height: 230px;
-    background: #fff;
+    background: @foregroundColor;
     z-index: 3;
 }
 #baymaxRightArm
@@ -105,7 +107,7 @@
     left: 65px;
     width: 270px;
     height: 290px;
-    background: #fff;
+    background: @foregroundColor;
     border-top-left-radius: 120px;
     border-top-right-radius: 120px;
     border-bottom-left-radius: 200px;
@@ -121,7 +123,7 @@
     top: 380px;
     height: 120px;
     width: 80px;
-    background: #fff;
+    background: @foregroundColor;
     border-top-left-radius: 200px;
     border-top-right-radius: 200px;
     border-bottom-left-radius: 100px;

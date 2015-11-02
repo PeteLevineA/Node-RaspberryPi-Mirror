@@ -1,19 +1,33 @@
 @import "transitionAll.less";
+@import "constants.less";
 
+.newsHeadline 
+{
+   display: flex;
+   flex-direction: column;
+   max-height: 100px;
+}
 .headlineTitle
 {
     font-size: 32px;
 }
 .headlineDescription
 {
-    font-size: 22px;
+    padding-left: 6px;
+    font-size: 22px;    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
 }
-#newsHeadlines, 
-#hackerNews
+.newsHeadlines, 
+.hackerNews
 {
     position: absolute;
-    bottom: 20px;
+    bottom: @padding;
     width: 45%;
+    height: 35%;
     .TransitionAll(1.6s);
 }
 .newsTransitionOut
@@ -23,21 +37,18 @@
 }
 .newsTransitionIn
 {
-    left: 20px;
+    left: @padding;
     margin-right: 40px;
     opacity: 1;
 }
-#newsHeadlines div, #hackerNews div
-{
-    margin: 6px;
-}
+
 .hackerNewsTransitionOut
 {
     right: -400px;
     opacity: 0;
 }
 .hackerNewsTransitionIn{
-    right: 0px;
+    right: @padding;
     margin-left: 40px;
     opacity: 1;
 }

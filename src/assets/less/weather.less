@@ -1,14 +1,19 @@
 @import "transitionAll.less";
+@import "constants.less";
 
-#weather
+.weather
 {
     position: absolute;
-    top: 22px;
+    top: @padding;
+    .TransitionAll(2s);
+}
+.forecast {
+    position: relative;
     .TransitionAll(2s);
 }
 .weatherTransitionIn
 {
-    right: 22px;
+    right: @padding;
     opacity: 1;
 }
 .weatherTransitionOut
@@ -20,38 +25,51 @@
 {
     font-size: 24px;
 }
-#mainWeatherImage
+.weatherImage img
 {
-    color: #fff;
+    color: @foregroundColor;
     width: 150px;
 }
-#mainWeatherimg, #mainTemp
+.weatherImage, .weatherTemp
 {
     text-align: center;
 }
-#mainTemp
+.weatherTemp
 {
     font-size: 36px;
+}
+.precipitation, .humidity, .wind {
+    padding-left: 6px;
 }
 .day
 {
     position: relative;
-    left: 50%;
-    margin-left: -90px;
-    display: table;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     font-size: 22px;
     padding-top: 10px;
 }
-.day span
+.day > span
 {
-    display: table-cell;
-    vertical-align: middle;
-    line-height: 50px;
     padding-left: 16px;
     padding-right: 16px;
 }
 .day img
 {
     width: 50px;
+}
+
+@media only screen and (orientation: landscape)
+{
+    .forecast {
+        position: absolute;
+        top: @padding;
+        left: 210px;
+    }
+    .weatherTransitionIn
+    {
+        right: 204px;
+        opacity: 1;
+    }
 }

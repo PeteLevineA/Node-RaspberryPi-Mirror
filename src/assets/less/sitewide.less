@@ -1,0 +1,31 @@
+@import "constants.less";
+
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+html
+{
+    background: @backgroundColor;
+    font-family: Ubuntu, 'Segoe UI Light', 'Roboto', "Helvetica Neue", Helvetica, Verdana;
+    font-weight: 100;
+    color: @foregroundColor;
+}
+
+#introText {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    margin-top: -56px;
+}
+.lightTitle
+{
+    font-size: 18px;
+}
