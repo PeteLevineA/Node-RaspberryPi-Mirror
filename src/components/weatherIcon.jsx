@@ -35,7 +35,7 @@ var WeatherIcon = React.createClass({
 		else {
 			weatherImage = 'images/sunny.svg';
 		}
-		return <img src={weatherImage} title={this.props.weather} />;
+		return <img src={weatherImage} title={this.props.weather} ref="icon" />;
 	}
 });
 

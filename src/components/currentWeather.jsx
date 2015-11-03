@@ -2,73 +2,42 @@
 
 var React = require('react');
 var WeatherIcon = require('./weatherIcon.jsx');
-var fetch = require('node-fetch');
-var config = require('../config/config.json');
-var WeatherInfo = require('../lib/weatherInfo.js');
 
 var CurrentWeather = React.createClass({
-	getDefaultProps: function() {
-	
+	propTypes: {
+		weather: React.PropTypes.object
 	},
-	getInitialState: function() {
+	getDefaultProps: function() {
 		return {
-			tempF: "loading",
-			humidity: "0",
-			wind: "0",
-			precip: "0",
-			text: "sunny",
-			icon: ""
+			tempF: 0,
+			humidity: 0,
+			wind: 0,
+			precip: 0,
+			text: 'loading',
+			icon: ''
 		};
 	},
-	componentDidMount: function() {
-		// fetch is a window.fetch pollyfill with promises
-		var self = this;
-		fetch(config.urls.weather)
-			.then(function(response) {
-				return response.json();
-			})
-			.then(function(json) {
-				self.loadWeather(json);
-			})
-			.catch(function(response) {
-				console.log(response);
-				self.setState({
-					tempF: "failed",
-					humidity: "0",
-					wind: "0",
-					precip: "0",
-					text: "sunny",
-					icon: ""
-				});
-			});
+	getInitialState: function() {
+		
 	},
-	loadWeather: function(weatherData) {
-		var weatherInfo = WeatherInfo(weatherData);
-		this.setState({
-			tempF: weatherInfo.tempF,
-			humidity: weatherInfo.humidity,
-			wind: weatherInfo.wind,
-			precip: weatherInfo.precip,
-			text: weatherInfo.text,
-			icon: weatherInfo.icon
-		});
+	componentDidMount: function() {
 		
 	},
 	render: function() {
 		return <div className="currentWeather">
             <div className="weatherImage">
-				<WeatherIcon weather={this.state.text} icon={this.state.icon} />
+				<WeatherIcon ref="icon" weather={this.props.weather.text} icon={this.props.weather.icon} />
 			</div>
-            <div className="weatherTemp">{this.state.tempF}°</div>
+            <div className="weatherTemp" ref="temp">{this.props.weather.tempF}°</div>
             <div>
                 <span className="lightTitle">precip</span>
-                <span className="precipitation">{this.state.precip}</span>
+                <span className="precipitation" ref="precip">{this.props.weather.precip}</span>
                 <br />
                 <span className="lightTitle">humidity</span>
-                <span className="humidity">{this.state.humidity}</span>
+                <span className="humidity" ref="humidity">{this.props.weather.humidity}</span>
                 <br />
                 <span className="lightTitle">wind</span>
-                <span className="wind">{this.state.wind}</span>
+                <span className="wind" ref="wind">{this.props.weather.wind}</span>
             </div>
         </div>;
 	}

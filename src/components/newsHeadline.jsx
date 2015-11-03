@@ -14,10 +14,10 @@ var NewsHeadline = React.createClass({
 	},
 	render: function() {
 		return <div className="newsHeadline">
-				<div className="headlineTitle">
+				<div className="headlineTitle" ref="title">
 					{this.props.title}
 				</div>
-				<div className="headlineDescription">
+				<div className="headlineDescription" ref="abstract">
 					{this.props.abstract}
 				</div>
 			</div>;

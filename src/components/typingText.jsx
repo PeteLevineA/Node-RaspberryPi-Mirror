@@ -40,7 +40,7 @@ var TypingText = React.createClass({
 	},
 	render: function() {
 		return <div className="TypingText">
-				<span className="introText">{this.state.message}</span>
+				<span className="introText" ref="text">{this.state.message}</span>
 				<span className="cursorText">_</span>
 			</div>;
 	}

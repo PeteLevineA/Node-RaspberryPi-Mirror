@@ -33,7 +33,7 @@ var DateTimeText = React.createClass({
 	},
 	render: function() {
 		var dateText = this.state.dateText;
-		return <span>{dateText}</span>;
+		return <span ref="date">{dateText}</span>;
 	}	
 });
 

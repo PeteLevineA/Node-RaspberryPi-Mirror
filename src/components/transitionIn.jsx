@@ -30,7 +30,7 @@ var TransitionIn = React.createClass({
 	},
 	render: function() {
 		var classAttrib = this.state.currentClass;
-		return <div className={classAttrib}>
+		return <div ref="transitionElement" className={classAttrib}>
 				{ this.props.children }
 			</div>;
 	}
