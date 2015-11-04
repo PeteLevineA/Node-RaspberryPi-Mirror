@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/PeteLevineA/Node-RaspberryPi-Mirror.svg?branch=master)](https://travis-ci.org/PeteLevineA/Node-RaspberryPi-Mirror)
+
+----------
 ## NodeJS Raspberry Pi Two Way Mirror##
 
 Inspired by Magic Mirror: [https://www.raspberrypi.org/blog/magic-mirror/](https://www.raspberrypi.org/blog/magic-mirror/)
