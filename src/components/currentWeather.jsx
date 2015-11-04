@@ -17,9 +17,6 @@ var CurrentWeather = React.createClass({
 			icon: ''
 		};
 	},
-	getInitialState: function() {
-		
-	},
 	componentDidMount: function() {
 		
 	},

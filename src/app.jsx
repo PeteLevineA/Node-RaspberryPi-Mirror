@@ -16,6 +16,20 @@ var config = require('./config/config.json');
 var DataLoader = require('./lib/dataLoader.js');
 
 var App = React.createClass({
+	getInitialState: function() {
+		return {
+			weather: { tempF: 0, humidity: 0, wind: 0, precip: 0, text: 'loading', icon: 'sunny' },
+			news: [ 
+				{ title: 'loading', abstract: '' }
+			],
+			hackerNews: [
+				{ title: 'loading', abstract: '' }
+			],
+			forecast: [
+					{ tempF: "failed", weather: "", icon: "" }
+				]
+		}
+	},
 	componentDidMount: function() {
 		var news = new DataLoader(),
 			hackerNews = new DataLoader(),
@@ -24,15 +38,27 @@ var App = React.createClass({
 			self = this;
 		
 		news.load(function(newsData) {
+			var newsFiltered = newsData.filter(function(newsObj, i) {
+				if( i >= 5 ) {
+					return false;
+				}
+				return true;
+			});
 			self.setState({
-				news: newsData
+				news: newsFiltered
 			});
 		}, config.urls.news, null, NewsInfo);
 		hackerNews.load(function(newsData) {
-			self.setState({
-				hackerNews: newsData
+			var newsFiltered = newsData.filter(function(newsObj, i) {
+				if( i >= 8 ) {
+					return false;
+				}
+				return true;
 			});
-		}, config.urls.hackerNews, config.urls.hackerNewsData, HackerNewsInfo);
+			self.setState({
+				hackerNews: newsFiltered
+			});
+		}, config.urls.hackerNews, config.urls.secondaryHackerNewsApi, HackerNewsInfo);
 		forecast.load(function(forecastData) {
 			self.setState({
 				forecast: forecastData

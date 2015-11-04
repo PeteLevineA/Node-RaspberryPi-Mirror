@@ -6,7 +6,8 @@ module.exports = function(newsData, secondaryNewsApi, newsDataCallback) {
 	var stories = [];
 	var storyCount = 0;
 	for (var i = 0; i < newsData.length; i++) {
-		fetch(secondaryNewsApi + newsData[i] + ".json")
+		var apiUrl = secondaryNewsApi + newsData[i] + '.json';
+		fetch(apiUrl)
 			.then(function(response) {
 				return response.json();
 			})
@@ -14,7 +15,7 @@ module.exports = function(newsData, secondaryNewsApi, newsDataCallback) {
 				stories[storyCount] = { title: json.title, abstract: '' };
 				storyCount++;
 				if( storyCount >= newsData.length ) {
-					newsDataCallback.call(this, stories);
+					newsDataCallback.call(null, stories);
 				}
 			})
 			.catch(function(response) {

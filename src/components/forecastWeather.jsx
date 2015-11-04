@@ -1,11 +1,11 @@
 "use strict";
 
 var React = require('react');
-var ForecastItem = requre('./forecastItem.jsx');
+var ForecastItem = require('./forecastItem.jsx');
 
 var ForecastWeather = React.createClass({
 	propTypes: {
-		forecast: React.PropTypes.object
+		forecast: React.PropTypes.array
 	},
 	getDefaultProps: function() {
 		return {
@@ -14,16 +14,14 @@ var ForecastWeather = React.createClass({
 			]
 		}
 	},
-	getInitialState: function() {
-		
-	},
 	componentDidMount: function() {
 		
 	},
 	render: function() {
 		return <div className="forecast" ref="forecast">
 			{this.props.forecast.map(function(obj, i) {
-				return <ForecastItem forecast={obj} />;
+				var key = obj.weather.replace(/\s+/g, '') + i;
+				return <ForecastItem key={key} forecast={obj} index={i} />;
 			})}
 			</div>;
 	}
