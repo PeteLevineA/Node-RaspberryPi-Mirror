@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/PeteLevineA/Node-RaspberryPi-Mirror.svg?branch=master)](https://travis-ci.org/PeteLevineA/Node-RaspberryPi-Mirror)
+[![Build Status](https://travis-ci.org/PeteLevineA/Node-RaspberryPi-Mirror.svg?branch=master)](https://travis-ci.org/PeteLevineA/Node-RaspberryPi-Mirror) [![devDependency Status](https://david-dm.org/PeteLevineA/Node-RaspberryPi-Mirror/dev-status.svg)](https://david-dm.org/PeteLevineA/Node-RaspberryPi-Mirror#info=devDependencies)
 
 ----------
 ## NodeJS Raspberry Pi Two Way Mirror##
@@ -31,8 +31,7 @@ Front-end:
  - Mocha Unit Testing [https://mochajs.org/](https://mochajs.org/)
  
  
- 
- How it works
+How it works
 =======
 First the NodeJS app.js script waits on a signal from the PIR sensor. When the PIR sensor detects motion the application turns the display on and simply opens a browser in fullscreen mode to your html page. Two minutes after the last motion detection, it simply kills the browser process and turns off the display.
 
