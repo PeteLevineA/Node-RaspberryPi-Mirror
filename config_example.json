@@ -1,0 +1,13 @@
+{
+	"urls": {
+		// Keys Needed:
+		"news": "http://api.nytimes.com/svc/topstories/v1/{section}.json?api-key={your-api-key}",
+		// Get Key first then Location code
+		// Get location code first by doing a sample search: http://apidev.accuweather.com/developers/samples
+		"weather": "http://apidev.accuweather.com/currentconditions/v1/LOCATIONCODEHERE.json?language=en&apikey=APIKEYHERE",
+		"forecast": "http://apidev.accuweather.com/forecasts/v1/daily/5day/LOCATIONCODEHERE.json?language=en&apikey=APIKEYHERE",
+		// No Keys Needed, can leave
+		"hackerNews": "https://hacker-news.firebaseio.com/v0/topstories",
+		"secondaryHackerNewsApi": "https://hacker-news.firebaseio.com/v0/item/"
+	}
+}
