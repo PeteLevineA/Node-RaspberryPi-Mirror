@@ -3,6 +3,7 @@
 ----------
 ## NodeJS Raspberry Pi Two Way Mirror##
 
+Checkout the Live Demo ( with some sample data ) of the User Interface written in ReactJS [http://petelevinea.github.io/Node-RaspberryPi-Mirror/](http://petelevinea.github.io/Node-RaspberryPi-Mirror/)
 Inspired by Magic Mirror: [https://www.raspberrypi.org/blog/magic-mirror/](https://www.raspberrypi.org/blog/magic-mirror/)
 
 **Technologies Used:**
