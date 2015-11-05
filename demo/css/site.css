@@ -330,7 +330,7 @@ html {
   .forecast {
     position: absolute;
     top: 22px;
-    left: 210px;
+    left: 160px;
   }
   .weatherTransitionIn {
     right: 204px;

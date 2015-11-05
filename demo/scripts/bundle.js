@@ -37507,15 +37507,18 @@ var DataLoader = require('./lib/dataLoader.js');
 var App = React.createClass({displayName: "App",
 	getInitialState: function() {
 		return {
-			weather: { tempF: 0, humidity: 0, wind: 0, precip: 0, text: 'loading', icon: 'sunny' },
-			news: [ 
-				{ title: 'loading', abstract: '' }
-			],
+			weather: { tempF: 80, humidity: 0, wind: '0 mph', precip: 0, text: 'sunny', icon: 'sunny' },
+			news: [
+        { "title": "Example News", "abstract": "This is example news. More at 11." },
+        { "title": "Awesome News", "abstract": "This is extremely awesome news." }
+      ],
 			hackerNews: [
 				{ title: 'loading', abstract: '' }
 			],
 			forecast: [
-					{ tempF: "failed", weather: "", icon: "" }
+					{ tempF: 80, weather: "sunny", icon: "sunny" },
+          { tempF: 82, weather: "sunny", icon: "sunny" },
+          { tempF: 84, weather: "sunny", icon: "sunny" }
 				]
 		}
 	},
@@ -37901,22 +37904,22 @@ var WeatherIcon = React.createClass({displayName: "WeatherIcon",
 		var weather = this.props.weather.toLowerCase();
 		var icon = this.props.icon.toLowerCase();
 		if (weather.indexOf('partly') > -1 || icon.indexOf('partly') > -1) {
-			weatherImage = 'images/partlycloudy.svg';
+			weatherImage = './demo/images/partlycloudy.svg';
 		}
 		else if (weather.indexOf('overcast') > -1 || weather.indexOf('cloudy') > -1 || icon.indexOf('cloudy') > -1) {
-			weatherImage = 'images/cloudy.svg';
+			weatherImage = './demo/images/cloudy.svg';
 		}
 		else if (weather.indexOf('rain') > -1 || weather.indexOf('rain') > -1 || icon.indexOf('rain') > -1) {
-			weatherImage = 'images/rain.svg';
+			weatherImage = './demo/images/rain.svg';
 		}
 		else if (weather.indexOf('snow') > -1 || weather.indexOf('snow') > -1 || icon.indexOf('snow') > -1) {
-			weatherImage = 'images/snow.svg';
+			weatherImage = './demo/images/snow.svg';
 		}
 		else if (weather.indexOf('wind') > -1 || weather.indexOf('wind') > -1 || icon.indexOf('wind') > -1) {
-			weatherImage = 'images/windy.svg';
+			weatherImage = './demo/images/windy.svg';
 		}
 		else {
-			weatherImage = 'images/sunny.svg';
+			weatherImage = './demo/images/sunny.svg';
 		}
 		return React.createElement("img", {src: weatherImage, title: this.props.weather, ref: "icon"});
 	}
