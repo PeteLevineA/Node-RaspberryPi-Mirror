@@ -1,0 +1,350 @@
+#baymax {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+}
+#intro {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+  margin-top: -56px;
+}
+#baymaxHeadAlone {
+  position: absolute;
+  top: 50%;
+  margin-top: -186px;
+  left: 0px;
+  width: 100%;
+}
+#baymaxHead {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  margin-left: -90px;
+  height: 130px;
+  width: 180px;
+  background: #fff;
+  border-radius: 60px;
+}
+.eye {
+  height: 40px;
+  width: 40px;
+  background: #000;
+  border-radius: 20px;
+}
+#baymaxLeftEye {
+  position: absolute;
+  left: 30px;
+  top: 40px;
+}
+#baymaxRightEye {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+}
+#baymaxBrow {
+  width: 50px;
+  height: 7px;
+  position: absolute;
+  left: 65px;
+  top: 59px;
+  background: #000;
+}
+#baymaxLeftArm,
+#baymaxRightArm {
+  position: absolute;
+  top: 134px;
+  width: 80px;
+  height: 230px;
+  background: #fff;
+  z-index: 3;
+}
+#baymaxRightArm {
+  right: 30px;
+  border-top-right-radius: 180px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 160px;
+  border-bottom-left-radius: 60px;
+  transform: rotate(343deg);
+  -webkit-transform: rotate(343deg);
+  -moz-transform: rotate(343deg);
+  -o-transform: rotate(343deg);
+  writing-mode: lr-tb;
+}
+#baymaxLeftArm {
+  left: 30px;
+  border-top-left-radius: 180px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 160px;
+  border-bottom-right-radius: 60px;
+  transform: rotate(17deg);
+  -webkit-transform: rotate(17deg);
+  -moz-transform: rotate(17deg);
+  -o-transform: rotate(17deg);
+  writing-mode: lr-tb;
+}
+#baymaxTummy {
+  position: absolute;
+  top: 130px;
+  left: 65px;
+  width: 270px;
+  height: 290px;
+  background: #fff;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  z-index: 2;
+}
+#baymaxLeftLeg,
+#baymaxRightLeg {
+  position: absolute;
+  top: 380px;
+  height: 120px;
+  width: 80px;
+  background: #fff;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+#baymaxLeftLeg {
+  left: 118px;
+}
+#baymaxRightLeg {
+  right: 118px;
+}
+
+
+.cursorText {
+  animation: fadeAnimation ease-out 0.6s;
+  animation-iteration-count: infinite;
+  -webkit-animation: fadeAnimation ease-out 0.6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation: fadeAnimation ease-out 0.6s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation: fadeAnimation ease-out 0.6s;
+  -o-animation-iteration-count: infinite;
+  -ms-animation: fadeAnimation ease-out 0.6s;
+  -ms-animation-iteration-count: infinite;
+}
+@keyframes fadeAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fadeAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.dateTime {
+  position: absolute;
+  top: 22px;
+  font-size: 64px;
+  -webkit-transition: all ease-out 2s;
+  -moz-transition: all ease-out 2s;
+  -o-transition: all ease-out 2s;
+  transition: all ease-out 2s;
+}
+.dateTimeTransitionOut {
+  opacity: 0;
+  left: -100px;
+}
+.dateTimeTransitionIn {
+  opacity: 1;
+  left: 22px;
+}
+
+
+.newsHeadline {
+  display: flex;
+  flex-direction: column;
+  max-height: 100px;
+}
+.headlineTitle {
+  font-size: 32px;
+}
+.headlineDescription {
+  padding-left: 6px;
+  font-size: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.newsHeadlines,
+.hackerNews {
+  position: absolute;
+  bottom: 22px;
+  width: 45%;
+  height: 35%;
+  -webkit-transition: all ease-out 1.6s;
+  -moz-transition: all ease-out 1.6s;
+  -o-transition: all ease-out 1.6s;
+  transition: all ease-out 1.6s;
+}
+.newsTransitionOut {
+  left: -400px;
+  opacity: 0;
+}
+.newsTransitionIn {
+  left: 22px;
+  margin-right: 40px;
+  opacity: 1;
+}
+.hackerNewsTransitionOut {
+  right: -400px;
+  opacity: 0;
+}
+.hackerNewsTransitionIn {
+  right: 22px;
+  margin-left: 40px;
+  opacity: 1;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+html {
+  background: #000;
+  font-family: Ubuntu, 'Segoe UI Light', 'Roboto', "Helvetica Neue", Helvetica, Verdana;
+  font-weight: 100;
+  color: #fff;
+}
+#introText {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+  margin-top: -56px;
+}
+.lightTitle {
+  font-size: 18px;
+}
+
+
+.weather {
+  position: absolute;
+  top: 22px;
+  -webkit-transition: all ease-out 2s;
+  -moz-transition: all ease-out 2s;
+  -o-transition: all ease-out 2s;
+  transition: all ease-out 2s;
+}
+.forecast {
+  position: relative;
+  -webkit-transition: all ease-out 2s;
+  -moz-transition: all ease-out 2s;
+  -o-transition: all ease-out 2s;
+  transition: all ease-out 2s;
+}
+.weatherTransitionIn {
+  right: 22px;
+  opacity: 1;
+}
+.weatherTransitionOut {
+  right: -160px;
+  opacity: 0;
+}
+#mainWeather {
+  font-size: 24px;
+}
+.weatherImage img {
+  color: #fff;
+  width: 150px;
+}
+.weatherImage,
+.weatherTemp {
+  text-align: center;
+}
+.weatherTemp {
+  font-size: 36px;
+}
+.precipitation,
+.humidity,
+.wind {
+  padding-left: 6px;
+}
+.day {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 22px;
+  padding-top: 10px;
+}
+.day > span {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.day img {
+  width: 50px;
+}
+@media only screen and (orientation: landscape) {
+  .forecast {
+    position: absolute;
+    top: 22px;
+    left: 210px;
+  }
+  .weatherTransitionIn {
+    right: 204px;
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1280) and (-webkit-max-device-pixel-ratio: 1) {
+  .forecast {
+    position: absolute;
+    top: 22px;
+    left: 210px;
+  }
+  .weatherTransitionIn {
+    right: 204px;
+    opacity: 1;
+  }
+}
